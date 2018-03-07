@@ -19,4 +19,13 @@ export class UsersService {
     this.inactiveUsers.splice(id, 1);
     this.countService.incrementCount();
   }
+
+  getActiveUsers() {
+    return this.activeUsers;
+  }
+
+  getInactiveUsers() {
+    return this.inactiveUsers;
+  }
+
 }

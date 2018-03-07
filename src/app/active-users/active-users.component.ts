@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component} from '@angular/core';
 import {UsersService} from '../users.service';
 
 @Component({
@@ -7,7 +7,7 @@ import {UsersService} from '../users.service';
   styleUrls: ['./active-users.component.css']
 })
 export class ActiveUsersComponent {
-  users: string[] = this.userService.activeUsers;
+  users: string[] = this.userService.getActiveUsers();
 
   constructor(private userService: UsersService) {}
 
